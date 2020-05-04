@@ -12,7 +12,8 @@ const httpLink = createHttpLink({
   uri: "http://localhost:4000"
 });
 
-const upload = createUploadLink({ uri: "http://localhost:4000/graphql" });
+// const upload = createUploadLink({ uri: "http://localhost:4000/graphql" });
+const upload = createUploadLink({ uri: "https://polar-brook-46695.herokuapp.com/graphql" });
 
 const authLink = setContext(() => {
   const token = localStorage.getItem('jwtToken')
