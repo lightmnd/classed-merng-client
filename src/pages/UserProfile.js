@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react";
 import { Form, Button, List, Image } from "semantic-ui-react";
 import gql from "graphql-tag";
 import { useMutation, useQuery } from "@apollo/react-hooks";
-import { PromiseProvider } from "mongoose";
 import { useForm } from "./../utils/hooks";
 import { AuthContext } from "./../context/auth";
 

@@ -2,7 +2,6 @@ import React, { useState, useContext, useCallback } from 'react';
 import { Form, Button, Card } from 'semantic-ui-react';
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/react-hooks';
-import { PromiseProvider } from 'mongoose';
 import { useForm } from './../utils/hooks';
 import { AuthContext } from './../context/auth';
 import { useDropzone } from 'react-dropzone';
