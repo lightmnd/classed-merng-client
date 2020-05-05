@@ -9,11 +9,11 @@ import { setContext } from 'apollo-link-context'
 
 
 const httpLink = createHttpLink({
-  uri: "http://localhost:4000"
+  uri: "https://polar-brook-46695.herokuapp.com"
 });
 
 // const upload = createUploadLink({ uri: "http://localhost:4000/graphql" });
-const upload = createUploadLink({ uri: "https://polar-brook-46695.herokuapp.com/graphql" });
+const upload = createUploadLink({ uri: "https://polar-brook-46695.herokuapp.com" });
 
 const authLink = setContext(() => {
   const token = localStorage.getItem('jwtToken')

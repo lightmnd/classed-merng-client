@@ -45,5 +45,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://polar-brook-46695.herokuapp.com/graphql"
+  "proxy": "https://polar-brook-46695.herokuapp.com"
 }
