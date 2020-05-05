@@ -26,7 +26,7 @@ const authLink = setContext(() => {
 
 const client = new ApolloClient({
   // link: authLink.concat(httpLink, upload),
-  link: authLink.concat(upload),
+  link: authLink.concat(upload, httpLink),
   cache: new InMemoryCache()
 });
 
