@@ -9,23 +9,23 @@ import { setContext } from 'apollo-link-context'
 
 
 const httpLink = createHttpLink({
-  uri: "https://polar-brook-46695.herokuapp.com/graphql"
+  uri: "https://polar-brook-46695.herokuapp.com/"
 });
 
 // const upload = createUploadLink({ uri: "http://localhost:4000/graphql" });
-const upload = createUploadLink({ uri: "https://polar-brook-46695.herokuapp.com/graphql" });
+const upload = createUploadLink({ uri: "https://polar-brook-46695.herokuapp.com/" });
 
 const authLink = setContext(() => {
   const token = localStorage.getItem('jwtToken')
   return {
     headers: {
-      Authorization: `Bearer ${token}`
+      Authorization: token ? `Bearer ${token}` : ''
     }
   }
 })
 
 const client = new ApolloClient({
-  //link: authLink.concat(httpLink, upload),
+  // link: authLink.concat(httpLink, upload),
   link: authLink.concat(upload),
   cache: new InMemoryCache()
 });
