@@ -8,9 +8,9 @@ import { ApolloProvider } from "@apollo/react-hooks";
 import { setContext } from 'apollo-link-context'
 
 
-const httpLink = createHttpLink({
-  uri: "https://polar-brook-46695.herokuapp.com/"
-});
+// const httpLink = createHttpLink({
+//   uri: "https://polar-brook-46695.herokuapp.com/"
+// });
 
 // const upload = createUploadLink({ uri: "http://localhost:4000/graphql" });
 const upload = createUploadLink({ uri: "https://polar-brook-46695.herokuapp.com/graphql" });
@@ -26,7 +26,7 @@ const authLink = setContext(() => {
 
 const client = new ApolloClient({
   // link: authLink.concat(httpLink, upload),
-  link: authLink.concat(upload, httpLink),
+  link: authLink.concat(upload),
   cache: new InMemoryCache()
 });
 
